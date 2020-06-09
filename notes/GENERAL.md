@@ -38,3 +38,13 @@ hugo new dir1/dir2/<_index class="md"></_index>
 
 * Archetypes
 An archetype is basically a front matter template ready to be replicated and populate it's paramameter values with real data.
+
+If you create an archetype whose name matches a directory, all pages created within that directory will have the front matter inherited from that archetype.
+
+* Shortcodes  
+Predefined chunks of HTML that you can add to your pages with a markdown, well, shortcode.  
+The syntax is as follows:  
+```
+	{{ < shortcode-name param1 param2 > }}
+```
+ You can find more information on shortcodes in the [following page](https://gohugo.io/content-management/shortcodes/).

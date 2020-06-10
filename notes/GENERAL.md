@@ -48,3 +48,27 @@ The syntax is as follows:
 	{{ < shortcode-name param1 param2 > }}
 ```
  You can find more information on shortcodes in the [following page](https://gohugo.io/content-management/shortcodes/).
+
+* Taxonomies
+At the end of the day are frontend matter that add metadata on our content.
+```yaml
+tags: ['whatever']
+categories: ['cagegory1']
+```
+
+When you create tags, on list pages you can list them to display a list of all the pages that contain that tag.
+
+* Custom Taxonomies
+We can create our arbitrary taxonomies.
+```yaml
+moods: ['happy', 'upbeat']
+```
+Since moods is not a default taxonomy in Hugo, the system isn't creating us a list page for moods as it does for categories and tags.
+
+To register the new taxonomy, we must go to config.toml and write:
+```toml
+[taxonomies]
+	tag = "tags"
+	categoriy = "categories"
+	mood = "moods"
+```

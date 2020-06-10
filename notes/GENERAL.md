@@ -72,3 +72,6 @@ To register the new taxonomy, we must go to config.toml and write:
 	categoriy = "categories"
 	mood = "moods"
 ```
+
+* Layouts
+They are the html skeleton of our Hugo site, when you use a layout, all the pages that extend from that layout will use their structure.

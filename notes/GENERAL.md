@@ -81,3 +81,6 @@ In layouts folder, you create a now folder named `_default`
 
 * Variables
 To access the content of an md content file, we use `{{.Content}}` in out templates.
+
+* How do you create the Home page of your Hugo site?
+Creating an `index.html` file in the root layouts folder.

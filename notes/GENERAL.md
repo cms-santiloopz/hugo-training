@@ -84,3 +84,8 @@ To access the content of an md content file, we use `{{.Content}}` in out templa
 
 * How do you create the Home page of your Hugo site?
 Creating an `index.html` file in the root layouts folder.
+
+* How to override the single or list templates for a specific dir (section)?
+You need to replicate the dir structure in the Layouts folder and within this dir,
+create the single and list templates.  
+Also, in the front matter of your .md you HAVE to switch `type = <section name>` to the name of the section. In this case it would have been `type : "dir"`

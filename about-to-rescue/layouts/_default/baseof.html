@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Base of</title>
+</head>
+<body>
+	Here bro!
+	<hr>
+	{{ block "main" . }}
+
+	{{ end }}
+	<hr>
+	See u man!
+	<hr>
+	{{ block "footer" . }}
+		<!-- if no template is found, this content will be projected -->
+		This is the default baseof footer
+	{{ end }}
+</body>
+</html>

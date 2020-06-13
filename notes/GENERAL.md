@@ -81,6 +81,28 @@ In layouts folder, you create a now folder named `_default`
 
 * Variables
 To access the content of an md content file, we use `{{.Content}}` in out templates.
+Variables can only be accessed in the `Layouts` folder and not in the `.md` files of the `content` folder.  
+The syntax of a variable is as follows:
+```
+{{ .<VarName> }}
+```
+Some useful variables:
+```
+{{.Title}}
+{{.Date}}
+{{.URL}}
+```
+Also, you can create your own custom variables in the Front Matter and access them from the template. They can be accessed in the following way:
+{{ .Params.<VarName> }}  
+Furthermore, you can also create YOUR OWN variables in the template with the followig syntax:  
+```
+{{ $myVarName := "whatever" }}
+```
+To access it, later in the same template you can use
+```
+{{ $myVarName }}
+```
+More info on [variables](https://gohugo.io/variables/).  
 
 * How do you create the Home page of your Hugo site?
 Creating an `index.html` file in the root layouts folder.

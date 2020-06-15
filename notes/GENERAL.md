@@ -162,4 +162,69 @@ You can have `json`, `yaml`, `toml` files inside the data folder. Imagine your f
 	{{ .objPropertyInData }}
 {{ end }}
 
-``` 
+```
+
+### Partial templates
+Inside the `layouts` folder, you can store your partials in a folder named `partials`
+Example `header.html` in `layouts/partials`.
+```
+<h1>Title</h1>
+```
+And then in your template, you can include the partial like this:
+```
+// here the dot represents the scope of all the variables I have access to
+{{ partial "header" . }}
+```
+Dictonaries with key value pairs can also be passed.
+```
+// here the dot represents the scope of all the variables I have access to
+{{ partial "header" (dict "name1" "val1" "name2" "val2") }}
+```
+
+### Shortcodes
+Are essentially Partial Templates that you can use in your `content` files through `markdown`.  
+In the `layouts` folder, you can store your shortcodes in a folder named `shortcodes`.
+Example `myshortcode.html` in `layouts/shortcodes`.  
+You can include it in the `content` markdown like this:
+```
+{{ <myshortcode color="blue"> }}
+```
+To access the variable in the shortcode, you do like this
+```
+	{{ .Get `color` }}
+```
+You can also pass what are named Positional Parameters.
+```
+{{ <myshortcode blue> }}
+```
+```
+	{{ .Get 0 }}
+```
+And now we get into Double Tag Shortcodes, the ones before are named Single Tag Shortcodes.
+```
+{{ <myshortcode blue> }}
+	Content in the shortcode tag
+{{ </myshortcode> }}
+```
+In the shortcode:
+```
+	{{ .Inner }}
+```
+If you have `markdown` inside your shortcode, you shall use the `%` symbol.
+```
+{{ % myshortcode blue % }}
+	**bold text**
+{{ % /myshortcode % }}
+```
+In the shortcode:
+```
+	{{ .Inner }}
+```
+
+### Build your website
+Type the command
+```
+$ hugo
+```
+In the terminal, and the final files will be bundled in the `public` folder.  
+Important note: `public` folder is not overwritten on build, so make sure to delete it before running the `hugo` command.

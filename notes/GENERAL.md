@@ -113,3 +113,43 @@ create the single and list templates.
 Also, in the front matter of your .md you HAVE to switch `type = <section name>` to the name of the section. In this case it would have been `type : "dir"`
 
 * The `baseof` template is a Higher Level Template, which means every single page is going to implement it. You can see an example in about-to-rescue project. 
+
+* Hugo Funtions
+Can only be used inside the `layouts` folder. The syntax is as follows:
+```
+{{ functionName param1 param2 ... paramN }}
+```
+Examples of built in functions:
+```
+{{ truncate 10 "A really long string" }}
+{{ add 10 5 }}
+{{ subtract 10 5 }}
+{{ singularize "dogs" }}
+```
+Loop through collection:
+```
+{{ range .Pages }}
+	{{ .Title }}<br />
+{{ end }}
+```
+To check a list of the available functions, you can come [here](https://gohugo.io/functions/).
+
+* Hugo Conditionals
+An example
+```
+{{ $var1 := "dog" }}
+{{ $var2 := "cat" }}
+ comparison operators
+ eq	gt ge lt le not
+{{ if eq $var1 $var2 }}
+	// conditional rendering
+{{ end }}
+{{ else }}
+	// else rendering
+{{ end }}
+```
+Negating:
+```
+{{ if not(eq $var1 $var2) and ge $var1 $var2 or <another boolean> }}
+{{ else if condition }}
+```

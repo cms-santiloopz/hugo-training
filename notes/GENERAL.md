@@ -153,3 +153,13 @@ Negating:
 {{ if not(eq $var1 $var2) and ge $var1 $var2 or <another boolean> }}
 {{ else if condition }}
 ```
+
+### Data folder
+You can have `json`, `yaml`, `toml` files inside the data folder. Imagine your file is named `data/data.json`:
+
+```
+{{ range .Site.Data.data }}
+	{{ .objPropertyInData }}
+{{ end }}
+
+``` 

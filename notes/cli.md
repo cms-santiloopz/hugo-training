@@ -20,5 +20,7 @@ $ hugo new {route/}<pagename>
 
 **Serve site in localhost**
 ```
-$ hugo server <-D>
+$ hugo server [flags]
 ```
+###### Flags
+`-D` -> see drafts pages

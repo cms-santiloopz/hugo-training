@@ -1,20 +1,5 @@
 # Notes
 
-* Create new site  
-```
-$ hugo new site <sitename>
-```
-
-* Create new page  
-```
-$ hugo new {route/}<pagename>
-```
-
-* Serve site in localhost  
-```
-$ hugo server <-D>
-```
--D to see drafts pages
 
 * Front matter
 Metadata that Hugo generates for each site. It can be written in `yaml`, `toml` or `json`

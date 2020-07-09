@@ -12,7 +12,7 @@ $ hugo new {route/}<pagename>
 
 * Serve site in localhost  
 ```
-$ hugo serve <-D>
+$ hugo server <-D>
 ```
 -D to see drafts pages
 

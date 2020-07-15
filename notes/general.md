@@ -97,8 +97,6 @@ You need to replicate the dir structure in the Layouts folder and within this di
 create the single and list templates.  
 Also, in the front matter of your .md you HAVE to switch `type = <section name>` to the name of the section. In this case it would have been `type : "dir"`
 
-* The `baseof` template is a Higher Level Template, which means every single page is going to implement it. You can see an example in about-to-rescue project. 
-
 * Hugo Funtions
 Can only be used inside the `layouts` folder. The syntax is as follows:
 ```

@@ -5,3 +5,4 @@
 1. [CLI](./cli.md)
 1. [Pipes](./pipes.md)
 1. [Styling](./styling.md)
+1. [Templating](./templating.md)

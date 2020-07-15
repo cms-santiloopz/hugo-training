@@ -1,2 +1,3 @@
 # Hugo training
-Grab your weapons, we are in a mission to rescue Hugo!
+
+A small repository with Hugo use cases, a reference, a guide, you can call me a friend.

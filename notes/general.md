@@ -12,8 +12,6 @@ draft: true
 ```
 Front matter can be also made custom, with filds of your own that add some custom information of your own interest.
 
-* How does Hugo organize content
-It distinguished between two types of content: `single pages` and `list pages`.
 
 * List pages
 By default, Hugo creates list pages for root content folder and folders within the first level of depth in this folder, if you have nested pages you need to create an `index` file for it to have a list site.

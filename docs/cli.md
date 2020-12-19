@@ -19,10 +19,9 @@ $ hugo new site <sitename>
 $ hugo new {route/}<pagename>
 ```
 
-###### Serve site in localhost
+#### Serve site in localhost
 ```bash
 $ hugo server [flags]
 ```
-
-###### Flags
+This command accepts the following flags:
 `-D` -> see drafts pages
